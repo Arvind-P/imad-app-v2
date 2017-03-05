@@ -20,3 +20,10 @@ body {
     height: 200px;
 }
 
+.articlestyle
+    {
+        color: grey;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 10px;
+    }
