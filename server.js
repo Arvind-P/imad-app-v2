@@ -5,6 +5,26 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var content = {
+    title: 'Article Two'
+    date: 'Mar 5th, 2017'
+    body-content: '<div class="articlestyle">
+            <div>
+                <h1>Article One</h1>
+            </div>
+            <hr />
+            <div>
+                <p>Feb 28, 2017</p>
+            </div>
+            <div>
+                This is a page created simply using HTML. It will later on be loaded using a javascript.
+                <br />
+                The page is mobile friendly too
+            </div>
+        </div>'
+    
+}
+
 app.get('/ui/index.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
