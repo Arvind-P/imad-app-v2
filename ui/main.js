@@ -28,7 +28,7 @@ img.onclick = function()
 {
     // var changedheading = document.querySelector('h1');
     var changedheading = document.getElementById('maincontent');
-    changedheading.textContent = 'This is a new content that is dynamically prompted by the main.js file <br />';
+    changedheading.textContent = 'This is a new content that is dynamically prompted by the main.js file';
     
     var interval = setInterval(marginRight,50);        
     //the marginRight function will be called every 50ms and the image is gradually moved
