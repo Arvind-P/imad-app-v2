@@ -9,10 +9,13 @@ var timesrefreshed = localStorage.getItem('RefreshCount');
 timesrefreshed += 1;
 localStorage.setItem('RefreshCount',timesrefreshed);
 
-var lastaccessedtime = '';
+var lastaccessedtimetext = '';
 
 var lasttime = document.getElementById('lasttime');
-lasttime.textContent = "Last Access Time : " + timesrefreshed + "\\n Local with respect to the current browser and device";
+lastaccessedtimetext = 'Last Access Time : ' + timesrefreshed;
+lastaccessedtimetext = lastaccessedtimetext + '\n';
+lastaccessedtimetext = lastaccessedtimetext + 'Local with respect to the current browser and device';
+lasttime.textContent = lastaccessedtimetext;
 
 function marginRight()
 {
