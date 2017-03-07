@@ -5,17 +5,20 @@ alert('Click on the image and it will move gradually');
 var img = document.getElementById('imgmadi');
 var marginleft = 0;
 
-var timesrefreshed = localStorage.getItem('RefreshCount');
-timesrefreshed += 1;
-localStorage.setItem('RefreshCount',timesrefreshed);
+var lastaccessedtime = localStorage.getItem('LastLocalTime');
+var dt,mnth,yr,hrs,mns,sec;
+dt = getDate();
+mnth = getMonth();
+mnth = mnth + 1;
+yr = getFullYear();
+hrs = getHours();
+mns = getMinutes();
+sec = getSeconds();
+lastaccessedtime = dt + '/' + mnth + '/' + yr + ' ' + hrs + ':' + mns + ':' + sec;
+localStorage.setItem('LastLocalTime',lastaccessedtime);
 
-var lastaccessedtimetext = '';
-
-var lasttime = document.getElementById('lasttime');
-lastaccessedtimetext = 'Last Access Time : ' + timesrefreshed;
-lastaccessedtimetext = lastaccessedtimetext + '<br>';
-lastaccessedtimetext = lastaccessedtimetext + 'Local with respect to the current browser and device';
-lasttime.textContent = lastaccessedtimetext;
+var lasttimetext = document.getElementById('lasttime');
+lasttimetext.textContent = 'Last Accessed Time : ' + lastaccessedtime;
 
 function marginRight()
 {
