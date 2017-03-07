@@ -5,10 +5,14 @@ alert('Click on the image and it will move gradually');
 var img = document.getElementById('imgmadi');
 var marginleft = 0;
 
+var timesrefreshed = localstorage.getItem('RefreshCount');
+timesrefreshed += 1;
+localstorage.setItem('RefreshCount',timesrefreshed);
+
 var lastaccessedtime = '';
 
 var lasttime = document.getElementById('lasttime');
-lasttime.textContent = "Last Access Time : " + lastaccessedtime;
+lasttime.textContent = "Last Access Time : " + timesrefreshed;
 
 function marginRight()
 {
