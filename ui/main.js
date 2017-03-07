@@ -13,7 +13,8 @@ function marginRight()
     }
     else
     {
-        alert('Image movement stopped');
+        alert('Image movement restarting');
+        marginleft = 0;
     }
 }
 
