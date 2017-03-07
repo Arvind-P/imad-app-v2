@@ -13,7 +13,7 @@ var lastaccessedtimetext = '';
 
 var lasttime = document.getElementById('lasttime');
 lastaccessedtimetext = 'Last Access Time : ' + timesrefreshed;
-lastaccessedtimetext = lastaccessedtimetext + '\n';
+lastaccessedtimetext = lastaccessedtimetext + '<br>';
 lastaccessedtimetext = lastaccessedtimetext + 'Local with respect to the current browser and device';
 lasttime.textContent = lastaccessedtimetext;
 
