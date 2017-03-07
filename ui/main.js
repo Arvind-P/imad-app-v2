@@ -6,19 +6,20 @@ var img = document.getElementById('imgmadi');
 var marginleft = 0;
 
 var lastaccessedtime = localStorage.getItem('LastLocalTime');
+var d = new Date();
 var dt,mnth,yr,hrs,mns,sec;
-dt = getDate();
-mnth = getMonth();
+dt = d.getDate();
+mnth = d.getMonth();
 mnth = mnth + 1;
-yr = getFullYear();
-hrs = getHours();
-mns = getMinutes();
-sec = getSeconds();
+yr = d.getFullYear();
+hrs = d.getHours();
+mns = d.getMinutes();
+sec = d.getSeconds();
 lastaccessedtime = dt + '/' + mnth + '/' + yr + ' ' + hrs + ':' + mns + ':' + sec;
 localStorage.setItem('LastLocalTime',lastaccessedtime);
 
 var lasttimetext = document.getElementById('lasttime');
-lasttimetext.textContent = 'Last Accessed Time : ' + lastaccessedtime;
+lasttimetext.innerHTML = 'Last Accessed Time : ' + lastaccessedtime;
 
 function marginRight()
 {
