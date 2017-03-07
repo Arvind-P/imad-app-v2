@@ -5,9 +5,9 @@ alert('Click on the image and it will move gradually');
 var img = document.getElementById('imgmadi');
 var marginleft = 0;
 
-var timesrefreshed = localstorage.getItem('RefreshCount');
+var timesrefreshed = localStorage.getItem('RefreshCount');
 timesrefreshed += 1;
-localstorage.setItem('RefreshCount',timesrefreshed);
+localStorage.setItem('RefreshCount',timesrefreshed);
 
 var lastaccessedtime = '';
 
