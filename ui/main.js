@@ -6,6 +6,7 @@ var img = document.getElementById('imgmadi');
 var marginleft = 0;
 
 var lastaccessedtime = localStorage.getItem('LastLocalTime');
+var currentaccessedtime;
 var d = new Date();
 var dt,mnth,yr,hrs,mns,sec;
 dt = d.getDate();
@@ -15,8 +16,8 @@ yr = d.getFullYear();
 hrs = d.getHours();
 mns = d.getMinutes();
 sec = d.getSeconds();
-lastaccessedtime = dt + '/' + mnth + '/' + yr + ' ' + hrs + ':' + mns + ':' + sec;
-localStorage.setItem('LastLocalTime',lastaccessedtime);
+currentaccessedtime = dt + '/' + mnth + '/' + yr + ' ' + hrs + ':' + mns + ':' + sec;
+localStorage.setItem('LastLocalTime',currentaccessedtime);
 
 var lasttimetext = document.getElementById('lasttime');
 lasttimetext.innerHTML = 'Last Accessed Time : ' + lastaccessedtime;
