@@ -1,6 +1,7 @@
 console.log('Loaded!');
 
 var changedheading = document.querySelector('h1');
+// var changedheading = document.getElementById('mainheading');
 changedheading.textContent = 'This is a new content that is popped by the main.js file';
 
 alert('Click on the image and it will move gradually');
