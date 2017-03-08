@@ -16,8 +16,8 @@ buttonelement.onclick = function() {
     var request = new XMLHttpRequest();
     
     request.onreadystatechange = function() {
-        console.log(request.readystate.toString());
-        if(request.readystate === XMLHttpRequest.Done) {
+        console.log(request.readyState.toString());
+        if(request.readyState === XMLHttpRequest.Done) {
             if(request.status === 200)
             {
                 //If the request has been completed and is success, then read the counter value returned by the request
