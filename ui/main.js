@@ -24,7 +24,9 @@ buttonelement.onclick = function() {
                 spanelement.innerHTML = counter.toString();
             }
         }
-        console.log((request.readystate).toString());
+        var requestnum = 0;
+        requestnum = request.readystate;
+        console.log(requestnum.toString());
     };
     
     //Make the request
