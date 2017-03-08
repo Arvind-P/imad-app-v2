@@ -15,6 +15,10 @@ buttonelement.onclick = function() {
     //Create a new httpRequest
     var request = new XMLHttpRequest();
     
+    //Make the request
+    request.open('GET', 'http://arvind-p.imad.hasura-app.io/ui/updatebuttonclickcounter', true);
+    request.send(null);
+    
     request.onreadystatechange = function() {
         if(request.readystate === XMLHttpRequest.Done) {
             if(request.status === 200)
@@ -26,7 +30,5 @@ buttonelement.onclick = function() {
         }
     };
     
-    //Make the request
-    request.open('GET', 'http://arvind-p.imad.hasura-app.io/ui/updatebuttonclickcounter', true);
-    request.send(null);
+    
 };
