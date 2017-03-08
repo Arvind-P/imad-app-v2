@@ -12,7 +12,7 @@ buttonelement.onclick = function() {
     //this increments a counter
     //get that counter and push it to the spanelement
     
-    //Make a new httpRequest
+    //Create a new httpRequest
     var request = new XMLHttpRequest();
     
     request.onreadystatechange = function() {
@@ -25,4 +25,8 @@ buttonelement.onclick = function() {
             }
         }
     };
+    
+    //Make the request
+    request.open('GET', 'http://arvind-p.imad.hasura-app.io/ui/updatebuttonclickcounter', true);
+    request.send(null);
 };
