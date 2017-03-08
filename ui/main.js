@@ -16,8 +16,6 @@ buttonelement.onclick = function() {
     var request = new XMLHttpRequest();
     
     request.onreadystatechange = function() {
-        // console.log((request.readyState).toString());
-        // console.log((XMLHttpRequest.Done).toString());
         if(request.readystate === XMLHttpRequest.Done) {
             if(request.status === 200)
             {
@@ -26,6 +24,7 @@ buttonelement.onclick = function() {
                 spanelement.innerHTML = counter.toString();
             }
         }
+        console.log((request.readystate).toString());
     };
     
     //Make the request
