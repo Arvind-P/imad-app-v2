@@ -78,9 +78,8 @@ app.get('/ui/updatebuttonclickcounter', function(req, res) {
   res.send(updatecounter.toString());
 });
 
-app.get('/addnewname/:name', function(req, res) {
-    var name = req.params.name;
-    alert('Name entered is : ' + name);
+app.get('/addnewname', function(req, res) {         // /addnewname?name=xxxx
+    var name = req.query.name;
     namearray.push(name);
     
     //JSON Javascript Object to String
