@@ -48,7 +48,7 @@ buttonsubmitelement.onclick = function() {
     var request = new XMLHttpRequest();
     
     //Make the Request
-    request.open('GET', 'http://arvind-p.imad.hasura-app.io/ui/addnewname/' + inputname, true);
+    request.open('GET', 'http://arvind-p.imad.hasura-app.io/addnewname/' + inputname, true);
     request.send(null);
     
     // var names = ['val1','val2','val3'];
