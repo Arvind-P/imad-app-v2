@@ -84,7 +84,7 @@ app.get('/addnewname/:name', function(req, res) {
     namearray.push(name);
     
     //JSON Javascript Object to String
-    res.send(JSON.string(namearray));
+    res.send(JSON.stringify(namearray));
 });
 
 
