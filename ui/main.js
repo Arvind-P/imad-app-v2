@@ -53,10 +53,12 @@ buttonsubmitelement.onclick = function() {
             {
                 //If the request has been completed and is success, then read the counter value returned by the request
                 var receivedlistasstring = request.responseText;
-                //alert(receivedlistasstring);
+                //in the above line, the list is actually sent as a STRING
+                //It is PARSED back to a list using the JSON code below 
+                var arraylist = JSON.parse(receivedlistasstring);
                 var list = '';
-                for(var i=0;i<receivedlistasstring.length;i++)
-                    list = list + '<li>' + receivedlistasstring[i] + '</li>';
+                for(var i=0;i<arraylist.length;i++)
+                    list = list + '<li>' + arraylist[i] + '</li>';
                 ulelement.innerHTML = list;
             }
         }
