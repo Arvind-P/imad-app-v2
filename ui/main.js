@@ -30,3 +30,12 @@ buttonelement.onclick = function() {
     request.open('GET', 'http://arvind-p.imad.hasura-app.io/ui/updatebuttonclickcounter', true);
     request.send(null);
 };
+
+var buttonsubmitelement = document.getElementById('btnsubmit');
+var ulelement = document.getElementById('unorderedlistofitems');
+
+buttonsubmitelement.onclick = function() {
+    var list = ['val1','val2','val3'];
+    
+    ulelement.innerHTML = list;
+};
