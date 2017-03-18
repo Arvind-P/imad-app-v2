@@ -53,7 +53,11 @@ buttonsubmitelement.onclick = function() {
             {
                 //If the request has been completed and is success, then read the counter value returned by the request
                 var receivedlistasstring = request.responseText;
-                alert(receivedlistasstring);
+                //alert(receivedlistasstring);
+                var list = '';
+                for(var i=0;i<receivedlistasstring.length;i++)
+                    list = list + '<li>' + receivedlistasstring[i] + '</li>';
+                ulelement.innerHTML = list;
             }
         }
     };
