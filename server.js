@@ -82,6 +82,8 @@ app.get('/ui/addnewname/:name', function(req, res) {
     var name = req.params.name;
     alert('Name entered is : ' + name);
     namearray.push(name);
+    
+    //JSON Javascript Object to String
 });
 
 
