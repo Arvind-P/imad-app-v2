@@ -1,6 +1,8 @@
 var spanelement = document.getElementById('updcounter');
 var buttonelement = document.getElementById('buttonclickme');
 
+alert('main.js is loaded now');
+
 // buttonelement.onclick = function() {
 //     //this updates the counter locally. once the index.html is closed and reopened, the counting restarts
 //     counter = counter + 1;
