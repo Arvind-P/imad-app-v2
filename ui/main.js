@@ -37,7 +37,7 @@ var ulelement = document.getElementById('unorderedlistofitems');
 buttonsubmitelement.onclick = function() {
     var names = ['val1','val2','val3'];
     var list = '';
-    for(vari=0;i<names.length;i++) {
+    for(var i=0;i<names.length;i++) {
         list = list + '<li>' + names[i] + '</li>';
     }
     ulelement.innerHTML = list;
