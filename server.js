@@ -6,6 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var updatecounter = 0;
+var namearray = [];
 
 var articletwocontent = {
     title: 'Article Two',
