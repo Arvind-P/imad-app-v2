@@ -35,11 +35,17 @@ var buttonsubmitelement = document.getElementById('btnsubmit');
 var ulelement = document.getElementById('unorderedlistofitems');
 
 buttonsubmitelement.onclick = function() {
-    var names = ['val1','val2','val3'];
-    var list = '';
-    for(var i=0;i<names.length;i++) {
-        list = list + '<li>' + names[i] + '</li>';
-    }
-    ulelement.innerHTML = list;
-    alert('SUBMIT is clicke now');
+    var inputtextelement = document.getElementById('nameinputbox');
+    var inputname;
+    inputname = inputtextelement.value;
+    if(inputname === '')
+        alert('Enter text in the Name Box and then click SUBMIT');
+    else
+        alert('Name Input is : ' + inputname);
+    // var names = ['val1','val2','val3'];
+    // var list = '';
+    // for(var i=0;i<names.length;i++) {
+    //     list = list + '<li>' + names[i] + '</li>';
+    // }
+    // ulelement.innerHTML = list;
 };
