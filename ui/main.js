@@ -47,6 +47,17 @@ buttonsubmitelement.onclick = function() {
     //Create a new httpRequest    
     var request = new XMLHttpRequest();
     
+    request.onreadystatechange = function() {
+        if(request.readystate === XMLHttpRequest.Done) {
+            if(request.status === 200)
+            {
+                //If the request has been completed and is success, then read the counter value returned by the request
+                var receivedlistasstring = request.responseText;
+                alert(receivedlistasstring);
+            }
+        }
+    };
+    
     //Make the Request
     request.open('GET', 'http://arvind-p.imad.hasura-app.io/addnewname?name=' + inputname, true);
     request.send(null);
