@@ -39,7 +39,10 @@ buttonsubmitelement.onclick = function() {
     var inputname;
     inputname = inputtextelement.value;
     if(inputname === '')
+    {
         alert('Enter text in the Name Box and then click SUBMIT');
+        return;
+    }
         
     //Create a new httpRequest    
     var request = new XMLHttpRequest();
